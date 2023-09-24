@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Now</title>
+    <link rel="stylesheet" type="text/css" href="touchscreenpen.css" />
+    <link rel="shortcut icon" href="images/ asan logo Small 3.jpeg" type="" />
+    <style>
+        /* Custom CSS for Buy Now page */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+  
+        header {
+          background-color: rgb(255, 255, 255);
+          color: rgb(0, 0, 0);
+          text-align: center;
+          padding: 20px;
+        }
+
+
+
+  
+        nav ul {
+          list-style-type: none;
+          padding: 0;
+        }
+  
+        nav li {
+          display: inline;
+          margin-right: 20px;
+        }
+  
+        nav a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+        }
+  
+        main {
+          padding: 20px;
+        }
+  
+        footer {
+          background-color: rgb(30, 30, 30);
+          color: white;
+          text-align: center;
+          padding: 10px;
+        }
+  
+        /* Product Information Section */
+        .product-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: rgb(255, 255, 255);
+          color: rgb(0, 0, 0);
+          padding: 10px;
+          margin-bottom: 20px;
+        }
+  
+        .product-info h2 {
+          font-size: 24px;
+          margin: 0;
+        }
+  
+        /* Product Photo */
+        .product-photo {
+          max-width: 200px;
+          height: auto;
+          padding: 10px;
+        }
+        .product-photo2 {
+          max-width: 200px;
+          height: auto;
+          margin-left: 1px;
+          padding: 10px;
+        }
+        .product-photo3 {
+          max-width: 200px;
+          height: auto;
+          margin-left: 1px;
+          padding: 10px;
+        }
+  
+        /* Buy Now Form Section */
+        .buy-now-form {
+          background-color: #f9f9f9;
+          padding: 20px;
+          border-radius: 10px;
+        }
+  
+        /* Styling for Mobile Users */
+        @media (max-width: 768px) {
+          .product-info {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+  
+          .product-photo {
+            margin-top: 10px;
+          }
+        }
+      </style>
+    <!-- Include your CSS file if needed -->
+  </head>
+  <body>
+        <header>
+                <img class="2nd_logo" src="images/ asan logo copy Small.jpeg" width=300px alt="Your Logo" />
+                <nav>
+                  <!-- Navigation links if needed -->
+                </nav>
+              </header>
+          
+              <main>
+                <section class="product-info">
+                  <div>
+                    <h3 for="productName" id="productName" name="productName" >Product Name: Touch Screen Pen</h3>
+
+                    <label for="productID" id="productID" name="productID" >Product ID: BKAK456323</label>
+                  </div>
+                  <img
+                    class="product-photo"
+                    src="images/pen Small.jpeg"
+                    alt="Product Photo"
+                  />
+                  <img
+                    class="product-photo2"
+                    src="images/pen2.jpeg"
+                    alt="Product Photo"
+                  />
+                  <img
+                    class="product-photo3"
+                    src="images/pen3.jpeg"
+                    alt="Product Photo"
+                  />
+                </section>
+          
+        <h2>Enter Your Information</h2>
+        <form
+          action="https://script.google.com/macros/s/AKfycbwI7L_hBRTh6E75mWLRUNzVvNCg2ecfZiK4Zs0VIjnBh6bqTbwFYS62QMalNBqEArWLqA/exec"
+          method="post"
+          onsubmit="return placeOrder()"
+        >
+          <!-- Replace 'script_url_here' with your Google Apps Script URL -->
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName" value="Touch Screen Pen" readonly />
+
+          <label for="productID">Product ID:</label>
+          <input type="text" id="productID" name="productID" value="BKAK456323" readonly />
+
+
+          <label for="name">First Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" required />
+
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required />
+
+          <label for="city">City:</label>
+          <select id="city" name="city" required>
+            <option value="Quetta">Quetta</option>
+            <option value="Karachi">Karachi</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Lahore">Lahore</option>
+          </select>
+
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea>
+
+          <label for="paymentMethod">Payment Method:</label>
+          <select id="paymentMethod" name="paymentMethod" required>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+            <option value="EasyPaisa">EasyPaisa</option>
+          </select>
+
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Asan Khareed Online Shop</p>
+    </footer>
+
+    <div id="orderMessage" style="display: none">
+      Order placed successfully.
+    </div>
+
+    <script>
+      function placeOrder() {
+        // Display the order success message
+        document.getElementById("orderMessage").style.display = "block";
+        return true; // Allow the form to submit
+      }
+    </script>
+  </body>
+</html>
+
+
